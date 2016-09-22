@@ -1,0 +1,122 @@
+students = ['Johnny', 'Alice', 'Bob', 'Humpty', 'Peter', 'Jack']
+mark_list = [[50, 80, 60], [90, 70, 70], [70, 70, 90], [80, 80, 30], [60, 70, 100], [50, 60, 90]]
+teachers = ['Rekha', 'Salman', 'Amir', 'Amutha']
+subjects = ['physics', 'chemistry', 'geography']
+marks = []
+
+Ennumerable
+
+all?
+
+[1, 2, 3, 4].all?  => true
+[1, 2, 3, 4, nil].all? => false
+[1, 2, 3, 4, false].all? => false
+[true, true, true, true, false].all? => false
+
+[false, false, false, true].any? => false
+
+[false, false, false, false].any?
+
+living_things = %w(cat rat)
+class Fixnum
+  def distinction?
+    self > 79
+  end
+end
+
+
+class String
+  @@living_things = %w(cat rat)
+  def living_thing?
+    all_living_things.include? self
+  end
+  private
+  def all_living_things
+    @@living_things
+  end
+end
+
+
+exibit_a = "goat"
+exibit_a.living_thing?
+
+class String
+  @@living_things = %w(cat rat goat)
+  def living_thing?
+    all_living_things.include? self
+  end
+  private
+  def all_living_things
+    @@living_things
+  end
+end
+
+
+
+
+%w(cat mat rat).all? {|type| living_things.include? type}
+
+%w(cat mat rat).any? {|type| type.living_thing? }
+%w(cat mat rat).any?(&:living_thing?)
+
+
+
+[80, 79, 90, 100].all?(&:distinction?)
+
+
+#all?
+#any?
+#chunk
+#chunk_while
+#collect
+#collect_concat
+#count
+#cycle
+#detect
+#drop
+#drop_while
+#each_cons
+#each_entry
+#each_slice
+#each_with_index
+#each_with_object
+#entries
+#find
+#find_all
+#find_index
+#first
+#flat_map
+#grep
+#grep_v
+#group_by
+#include?
+#inject
+#lazy
+#map
+#max
+#max_by
+#member?
+#min
+#min_by
+#minmax
+#minmax_by
+#none?
+#one?
+#partition
+#reduce
+#reject
+#reverse_each
+#select
+#slice_after
+#slice_before
+#slice_when
+#sort
+#sort_by
+#take
+#take_while
+#to_a
+#to_h
+#zip
+Hash[['physics', 'chemistry', 'biology'].zip([80, 97, 86])]
+Hash[['physics', 'chemistry', 'biology'].map(&:to_sym).zip([80, 97, 86])]
+
